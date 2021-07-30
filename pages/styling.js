@@ -1,13 +1,7 @@
-import {
-  Link as ChakraLink,
-  Heading,
-  useColorMode,
-  VStack,
-  Box,
-  Button,
-} from '@chakra-ui/react';
+import { Heading, useColorMode, VStack } from '@chakra-ui/react';
+import MyAppStyles from '../components/MyAppStyles';
 
-const Index = () => {
+const Styling = () => {
   //! this is just for dark mode...
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = {
@@ -23,10 +17,11 @@ const Index = () => {
   return (
     <VStack minHeight="100vh" bg={bgColor[colorMode]}>
       <Heading py={20} color={textColor[colorMode]} fontSize="6xl">
-        Welcome to React
+        Styling Page
       </Heading>
+      <MyAppStyles />
     </VStack>
   );
 };
 
-export default Index;
+export default Styling;
